@@ -1,0 +1,104 @@
+.navbar { /* navbar wrapper */
+  position: sticky; /* stick to top */
+  top: 0; /* top offset */
+  z-index: 50; /* make sure navbar stays above */
+  background: var(--color-bg); /* background color */
+}
+
+.navbar-inner { /* inner navbar container */
+  display: flex; /* align child elements horizontally */
+  align-items: center; /* center items vertically */
+  justify-content: space-between; /* space between left and right */
+  padding: 12px 0; /* vertical padding */
+  position: relative; /* position context for overlay */
+}
+
+.logo { /* logo wrapper */
+  display: flex; /* keep logo item inline */
+  align-items: center; /* center vertically */
+  margin-left: 0; /* no extra left offset */
+}
+.logo-img { /* logo image */
+  height: 56px; /* image height */
+  width: auto; /* preserve aspect ratio */
+}
+
+.navbar-menu { /* menu container */
+  display: flex; /* row layout for menu */
+  align-items: center; /* center items */
+  gap: 36px; /* spacing between items */
+}
+
+.navbar-links { /* navigation link group */
+  display: flex; /* horizontal links */
+  align-items: center; /* center vertically */
+  gap: 36px; /* gap between links */
+}
+
+.navbar-links a { /* individual link style */
+  font-family: var(--font-heading); /* brand font */
+  font-weight: 500; /* medium weight */
+  font-size: 0.95rem; /* text size */
+  color: var(--color-text); /* default color */
+}
+
+.navbar-links a:hover { /* link hover state */
+  color: var(--color-primary); /* primary highlight */
+}
+
+.navbar-actions { /* action button group */
+  display: flex; /* inline buttons */
+  align-items: center; /* center vertically */
+  gap: 12px; /* space between buttons */
+}
+
+.applybtn { /* apply button variant */
+  background: var(--color-white); /* white background */
+  color: var(--color-primary); /* primary text */
+  border: 1px solid var(--color-primary); /* border color */
+  box-shadow: none; /* no shadow */
+}
+
+.navbar-toggle { /* mobile menu toggle */
+  display: none; /* hidden on desktop */
+  flex-direction: column; /* bars stacked */
+  gap: 5px; /* spacing between bars */
+  padding: 6px; /* button padding */
+}
+
+.navbar-toggle span { /* toggle bar */
+  width: 24px; /* bar width */
+  height: 2px; /* bar height */
+  background: var(--color-text); /* bar color */
+  border-radius: 2px; /* rounded ends */
+}
+
+@media (max-width: 860px) { /* mobile responsive */
+  .navbar-menu { /* mobile menu panel */
+    display: none; /* hide by default */
+    position: absolute; /* overlay menu */
+    top: 100%; /* below navbar */
+    left: 0; /* left edge */
+    right: 0; /* right edge */
+    background: var(--color-bg); /* background color */
+    flex-direction: column; /* stack items vertically */
+    align-items: flex-start; /* left align */
+    gap: 20px; /* spacing */
+    padding: 24px; /* inner padding */
+    border-bottom: 1px solid var(--color-border); /* bottom border */
+  }
+
+  .navbar-menu-open { /* displayed mobile menu */
+    display: flex; /* show menu */
+  }
+
+  .navbar-links { /* mobile link list */
+    flex-direction: column; /* vertical links */
+    align-items: flex-start; /* left align */
+    gap: 16px; /* spacing between links */
+  }
+
+  .navbar-toggle { /* show toggle button */
+    display: flex; /* visible on mobile */
+  }
+}

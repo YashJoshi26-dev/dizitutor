@@ -1,0 +1,124 @@
+﻿.form-page { /* form page layout */
+  display: grid; /* grid layout */
+  grid-template-columns: 1fr 1fr; /* two columns */
+  min-height: calc(100vh - 78px); /* full viewport height minus header */
+}
+
+.form-page-media { /* media side panel */
+  position: relative; /* positioning context */
+  overflow: hidden; /* hide overflow */
+  display: flex; /* center content */
+  align-items: center; /* vertical centering */
+  justify-content: flex-end; /* right align image */
+  background: var(--color-bg); /* section background */
+}
+
+.form-page-media img { /* media image */
+  margin-left: 40px; /* left spacing */
+  width: 100%; /* fill width */
+  height: 75%; /* set image height */
+  object-fit: cover; /* cover panel */
+  border-radius: var(--radius-lg); /* rounded corners */
+}
+
+.form-page-panel { /* form panel container */
+  display: flex; /* center inside panel */
+  align-items: center; /* vertical centering */
+  padding: 60px 64px; /* panel padding */
+}
+
+.form-page-inner { /* content wrapper */
+  width: 100%; /* full width */
+  max-width: 440px; /* maximum width */
+}
+
+.form-page-eyebrow { /* section label */
+  display: inline-block; /* shrink to text */
+  padding: 8px 18px; /* badge padding */
+  border-radius: var(--radius-pill); /* pill shape */
+  background: var(--color-accent-soft); /* soft background */
+  color: var(--color-primary-dark); /* accent text */
+  font-family: var(--font-heading); /* heading font */
+  font-weight: 600; /* medium weight */
+  font-size: 0.85rem; /* smaller text */
+  margin-bottom: 20px; /* spacing below */
+}
+
+.form-page-heading { /* main heading */
+  font-family: var(--font-heading); /* heading font */
+  font-weight: 800; /* bold */
+  font-size: 2.2rem; /* large size */
+  line-height: 1.2; /* line spacing */
+  margin-bottom: 12px; /* spacing below */
+}
+
+.form-page-subtext { /* subtext */
+  color: var(--color-text-muted); /* muted text color */
+  margin-bottom: 32px; /* spacing below */
+  line-height: 1.6; /* line spacing */
+}
+
+.form-field { /* form field wrapper */
+  margin-bottom: 18px; /* gap between fields */
+}
+
+.form-field label { /* field label */
+  display: block; /* full width */
+  font-family: var(--font-heading); /* heading font */
+  font-weight: 600; /* medium-bold */
+  font-size: 0.85rem; /* label font size */
+  margin-bottom: 6px; /* spacing below label */
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea { /* form controls */
+  width: 100%; /* full width */
+  padding: 12px 16px; /* control padding */
+  border: 1px solid var(--color-border); /* border style */
+  border-radius: 12px; /* rounded corners */
+  font-family: var(--font-body); /* body font */
+  font-size: 0.95rem; /* text size */
+  background: var(--color-white); /* white background */
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus { /* focus states */
+  outline: none; /* remove browser outline */
+  border-color: var(--color-primary); /* accent border on focus */
+}
+
+.form-field textarea { /* textarea adjustments */
+  resize: vertical; /* vertical resize only */
+  min-height: 90px; /* minimum height */
+}
+
+.form-submit { /* submit button wrapper */
+  width: 100%; /* full width */
+  justify-content: center; /* center button */
+  margin-top: 8px; /* spacing above button */
+}
+
+.form-success { /* success message */
+  font-family: var(--font-heading); /* heading font */
+  font-weight: 600; /* semibold */
+  color: var(--color-primary-dark); /* accent text */
+  background: var(--color-accent-soft); /* highlight background */
+  padding: 14px 18px; /* content padding */
+  border-radius: 12px; /* rounded corners */
+}
+
+@media (max-width: 900px) { /* responsive mobile layout */
+  .form-page { /* stack panels on mobile */
+    grid-template-columns: 1fr; /* one column layout */
+  }
+
+  .form-page-media { /* smaller media panel height */
+    height: 260px; /* fixed mobile height */
+  }
+
+  .form-page-panel { /* reduced panel padding */
+    padding: 40px 24px; /* mobile-friendly padding */
+  }
+}

@@ -1,0 +1,115 @@
+﻿.hero { /* hero section wrapper */
+  position: relative; /* allow overlay positioning */
+  min-height: 640px; /* minimum hero height */
+  display: flex; /* layout container */
+  align-items: center; /* center content */
+  overflow: hidden; /* clip overflow */
+}
+
+.hero-video { /* background video */
+  position: absolute; /* fill the area */
+  inset: 0; /* cover full container */
+  width: 100%; /* full width */
+  height: 100%; /* full height */
+  object-fit: cover; /* cover the container */
+  z-index: 0; /* behind content */
+  transform: translateZ(0);  
+  will-change: transform;
+}
+
+.hero-overlay { /* overlay gradient */
+  position: absolute; /* fill the hero */
+  inset: 0; /* full coverage */
+  background: linear-gradient(90deg, rgba(23, 24, 51, 0.75) 0%, rgba(23, 24, 51, 0.35) 60%, rgba(23, 24, 51, 0.15) 100%); /* dark gradient */
+  z-index: 1; /* above video */
+}
+
+.hero-content { /* hero content container */
+  position: relative; /* above overlay */
+  z-index: 2; /* top layer */
+  max-width: 640px; /* max width */
+  padding: 100px 24px 100px 80px; /* content padding */
+}
+
+.hero-eyebrow { /* small badge */
+  display: inline-block; /* shrink to content */
+  padding: 8px 18px; /* badge padding */
+  border-radius: var(--radius-pill); /* pill shape */
+  background: var(--color-accent-soft); /* accent background */
+  color: var(--color-primary-dark); /* accent text */
+  font-family: var(--font-heading); /* heading font */
+  font-weight: 600; /* semibold */
+  font-size: 0.85rem; /* small text */
+  margin-bottom: 24px; /* bottom spacing */
+}
+
+.hero-heading { /* hero title */
+  font-family: var(--font-heading); /* heading font */
+  font-weight: 800; /* bold text */
+  font-size: 3.2rem; /* large size */
+  line-height: 1.12; /* line spacing */
+  letter-spacing: -0.02em; /* tighter letters */
+  color: #ffffff; /* white text */
+  margin-bottom: 22px; /* spacing below */
+}
+
+.hero-subtext { /* hero description */
+  font-size: 1.05rem; /* readable size */
+  line-height: 1.6; /* line spacing */
+  color: rgba(255, 255, 255, 0.85); /* translucent white */
+  max-width: 460px; /* width cap */
+  margin-bottom: 34px; /* bottom spacing */
+}
+
+.hero-actions { /* button row */
+  display: flex; /* row layout */
+  align-items: center; /* center vertically */
+  gap: 14px; /* spacing between buttons */
+  margin-bottom: 40px; /* bottom spacing */
+}
+
+.hero-trust { /* trust section row */
+  display: flex; /* row layout */
+  align-items: center; /* vertical center */
+  gap: 14px; /* spacing */
+}
+
+.hero-avatars { /* avatar group */
+  display: flex; /* row layout */
+}
+
+.hero-avatar { /* avatar circle */
+  width: 34px; /* width */
+  height: 34px; /* height */
+  border-radius: 50%; /* circular shape */
+  border: 2px solid var(--color-bg); /* white border */
+  margin-left: -10px; /* overlap effect */
+  overflow: hidden; /* hide overflow */
+  display: block; /* block layout */
+}
+
+.hero-avatar:first-child { /* first avatar reset */
+  margin-left: 0; /* remove overlap on first item */
+}
+
+.hero-avatar img { /* avatar image */
+  width: 100%; /* fill avatar */
+  height: 100%; /* fill avatar */
+  object-fit: cover; /* cover container */
+}
+
+.hero-trust span:last-child { /* trust text */
+  font-size: 0.9rem; /* smaller text */
+  font-weight: 500; /* medium weight */
+  color: rgba(255, 255, 255, 0.85); /* soft white */
+}
+
+@media (max-width: 900px) { /* responsive adjustments */
+  .hero-heading { /* mobile heading size */
+    font-size: 2.2rem; /* smaller heading */
+  }
+
+  .hero-content { /* mobile padding */
+    padding: 60px 20px; /* compact spacing */
+  }
+}

@@ -1,0 +1,54 @@
+.btn { /* base button style */
+  display: inline-flex; /* inline flex container */
+  align-items: center; /* center contents */
+  gap: 8px; /* gap between icon and text */
+  font-family: var(--font-heading); /* button font */
+  font-weight: 600; /* medium weight */
+  border-radius: var(--radius-pill); /* pill-shaped corners */
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; /* smooth transitions */
+  white-space: nowrap; /* prevent text wrap */
+}
+
+.btn:active { /* pressed state */
+  transform: scale(0.97); /* shrink slightly on click */
+}
+
+.btn-sm { /* small button */
+  padding: 9px 20px; /* smaller padding */
+  font-size: 0.85rem; /* smaller text */
+}
+
+.btn-md { /* medium button */
+  padding: 13px 28px; /* medium padding */
+  font-size: 0.95rem; /* default text size */
+}
+
+.btn-primary { /* primary button */
+  background: var(--color-primary); /* brand color */
+  color: var(--color-white); /* white text */
+  box-shadow: 0 8px 20px -6px rgba(108, 92, 231, 0.55); /* subtle shadow */
+}
+
+.btn-primary:hover { /* hover state */
+  background: var(--color-primary-dark); /* darker background */
+}
+
+.btn-outline { /* outline button */
+  background: var(--color-white); /* white background */
+  color: var(--color-text); /* dark text */
+  border: 1px solid var(--color-border); /* light border */
+}
+
+.btn-outline:hover { /* hover state */
+  border-color: var(--color-primary); /* accent border */
+  color: var(--color-primary); /* accent text */
+}
+
+.btn-ghost { /* ghost button */
+  background: var(--color-accent-soft); /* soft background */
+  color: var(--color-primary-dark); /* text color */
+}
+
+.btn-ghost:hover { /* hover state */
+  background: #d6d3fa; /* stronger accent */
+}

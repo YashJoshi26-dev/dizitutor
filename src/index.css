@@ -1,0 +1,53 @@
+:root { /* design tokens and theme variables */
+  --color-bg: #f4f5fd; /* page background color */
+  --color-primary: #6c5ce7; /* primary brand color */
+  --color-primary-dark: #5a4bd6; /* darker primary shade */
+  --color-text: #171833; /* default text color */
+  --color-text-muted: #6b6d85; /* muted text color */
+  --color-white: #ffffff; /* white color */
+  --color-accent-soft: #e3e1fb; /* soft accent shade */
+  --color-border: #e4e4f0; /* border color */
+
+  --font-heading: "Plus Jakarta Sans", sans-serif; /* heading font family */
+  --font-body: "Inter", sans-serif; /* body font family */
+
+  --radius-lg: 32px; /* large border radius */
+  --radius-pill: 999px; /* pill shape radius */
+
+  --max-width: 1200px; /* maximum content width */
+}
+
+* { /* base reset for all elements */
+  margin: 0; /* remove default margins */
+  padding: 0; /* remove default padding */
+  box-sizing: border-box; /* include border in width and height */
+}
+
+body { /* global body styles */
+  background: var(--color-bg); /* body background */
+  color: var(--color-text); /* default text color */
+  font-family: var(--font-body); /* default font family */
+}
+
+img, video { /* media elements */
+  display: block; /* remove inline whitespace */
+  max-width: 100%; /* responsive width */
+}
+
+a { /* anchor reset */
+  text-decoration: none; /* remove underline */
+  color: inherit; /* inherit text color */
+}
+
+button { /* button reset */
+  font: inherit; /* inherit font settings */
+  cursor: pointer; /* pointer cursor */
+  border: none; /* remove border */
+  background: none; /* remove background */
+}
+
+.container { /* layout container */
+  max-width: var(--max-width); /* maximum content width */
+  margin: 0 auto; /* center container */
+  padding: 0 24px; /* horizontal padding */
+}
